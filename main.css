@@ -453,7 +453,6 @@ body {
         border-bottom: 1px solid #444D56;
         width: 92%;
     }
-    }
     .mobile-nav-links li a {
         color: #fff;
         font-weight: 600;
@@ -488,5 +487,51 @@ body {
     }
     .mobile-nav-right li a i {
         font-size: 16px;
+    }
+    #small-tab li i {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .mobile-search-bar .input-container {
+        width: 94%;
+    }
+    .mobile-search-bar input {
+        width: 93%;
+    }
+}
+
+@media (max-width: 380px) {
+    .profile-pic img {
+        width: 60px;
+    }
+    #small-tab {
+        overflow-x: scroll;
+        scrollbar-color: transparent;
+        padding-bottom: 0;
+    }
+    #small-tab ul li {
+        margin-bottom: 13px;
+    }
+    #small-tab ul {
+        width: 150%;
+        overflow-x: scroll;
+        scrollbar-color: transparent;
+    }
+}
+
+@media (max-width: 360px) {
+    .mobile-search-bar .input-container {
+        width: 93%;
+    }
+    .mobile-search-bar input {
+        width: 92%;
+    }
+}
+
+@media (max-width: 320px) {
+    .mobile-search-bar input {
+        width: 90%;
     }
 }
