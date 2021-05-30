@@ -42,7 +42,7 @@ body {
 .search-bar input {
     background: transparent;
     border: none;
-    width: 91%;
+    width: 90%;
     outline: none;
 }
 .search-bar .slash-icon {
