@@ -20,7 +20,7 @@ const baseUrl = 'https://api.github.com/graphql';
 
 // Github access code
 const githubData = {
-    "token": "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"
+    "token": "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"
 }
 
 //Fetching data
@@ -33,10 +33,10 @@ window.addEventListener('load', () => {
     fetch(baseUrl, {
         method: 'POST',
         headers: new Headers({
-            Authorization: "bearer " + githubData["token"],
             "Content-Type":"application/json"
         }),
         body: JSON.stringify({
+            Authorization: "bearer " + githubData["token"],
             query: `
             query($theUsername: String!) {
                 user(login: $theUsername) {
