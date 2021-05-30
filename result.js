@@ -8,6 +8,7 @@ const fullName = document.getElementById('fullname');
 const gitUsername = document.getElementById('github-username');
 const userBio = document.getElementById('bio-text');
 const email = document.getElementById('email');
+const totalCount = document.getElementById('count');
 // const repoName = document.getElementById('repo-name');
 const language = document.getElementById('language');
 const repoLanguageColor = document.getElementById('repo-language-color');
@@ -79,6 +80,7 @@ window.addEventListener('load', () => {
         fullName.innerHTML = githubUser.name;
         userBio.innerHTML = githubUser.bio;
         email.innerHTML = githubUser.email;
+        totalCount.innerHTML = githubUser.repositories.totalCount;
         displayPicture.setAttribute("src", githubUser.avatarUrl);
         navImg.setAttribute("src", githubUser.avatarUrl);
 
