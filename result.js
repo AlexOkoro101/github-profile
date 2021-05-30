@@ -1,3 +1,6 @@
+//API key
+import API_KEY from './apikey.mjs';
+
 //DOM Elements
 const displayPicture = document.getElementById('dp');
 const  navImg = document.getElementById('nav-img');
@@ -18,25 +21,23 @@ const repoDetail = document.getElementById('repo-detail');
 // Base URL
 const baseUrl = 'https://api.github.com/graphql';
 
-// Github access code
-const githubData = {
-    "token": "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"
-}
+
 
 //Fetching data
 
 window.addEventListener('load', () => {
     const username = sessionStorage.getItem("USERNAME");
     console.log(username)
+    
 
     document.getElementById('github-username').innerHTML = username;
     fetch(baseUrl, {
         method: 'POST',
         headers: new Headers({
+            Authorization: "bearer " + API_KEY,
             "Content-Type":"application/json"
         }),
         body: JSON.stringify({
-            Authorization: "bearer " + githubData["token"],
             query: `
             query($theUsername: String!) {
                 user(login: $theUsername) {
