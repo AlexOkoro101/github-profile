@@ -20,7 +20,7 @@ const baseUrl = 'https://api.github.com/graphql';
 
 // Github access code
 const githubData = {
-    "token": "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"
+    "token": ""
 }
 
 //Fetching data
