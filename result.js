@@ -1,5 +1,5 @@
 //API key
-import API_KEY from './apikey.mjs';
+import LOWKEY from './apikey.mjs';
 
 //DOM Elements
 const displayPicture = document.getElementById('dp');
@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
     fetch(baseUrl, {
         method: 'POST',
         headers: new Headers({
-            Authorization: "bearer " + API_KEY,
+            Authorization: "bearer " + LOWKEY,
             "Content-Type":"application/json"
         }),
         body: JSON.stringify({
