@@ -20,13 +20,13 @@ const baseUrl = 'https://api.github.com/graphql';
 
 // Github access code
 const githubData = {
-    "token": "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",
+    "token": "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"
 }
 
 //Fetching data
 
 window.addEventListener('load', () => {
-    const username = localStorage.getItem("USERNAME");
+    const username = sessionStorage.getItem("USERNAME");
     console.log(username)
 
     document.getElementById('github-username').innerHTML = username;

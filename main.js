@@ -1,10 +1,10 @@
 function handleSubmit () {
   const username = document.getElementById('username').value;
 
-  localStorage.setItem("USERNAME", username);
-  window.location('profile.html')
+  sessionStorage.setItem("USERNAME", username);
+  // window.location.href = "profile.html"
 
-  return;
+  // return;
 }
 
 const myFunction = () => {
