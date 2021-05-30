@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Github Profile</title>
+</head>
+<body>
+    <!-- Nav -->
+    <div class="navbar" id="window-nav">
+        <div class="logo">
+            <img src="img/logo.jpg" alt="">
+        </div>
+        <div class="search-bar">
+            <div class="input-container">
+                <input type="text" placeholder="Search or Jump to...">
+                <i class="slash-icon">/</i>
+            </div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Pull requests</a></li>
+                <li><a href="#">Issues</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="#"><i class="far fa-bell"></i></a></li>
+                <li><a href="#"><i class="fa fa-plus" style="font-size: 12px;"></i>  <i class="fa fa-caret-down"  style="font-size: 12px; margin-left: 2px;"></i></a></li>
+                <li><a href="#" id="img-link"><img alt=""  id="nav-img"> <i class="fa fa-caret-down"  style="font-size: 12px; margin-left: 2px;"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="navbar" id="mobile-nav">
+        <div class="initial-nav">
+            <a  href="javascript:void(0);" class="nav-icon" id="nav-toggle" onclick="myFunction()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="logo">
+                <img src="img/logo.jpg" alt="">
+            </div>
+            <div class="notification">
+                <i class="far fa-bell"></i>
+            </div>
+        </div>
+        <div class="navigation" id="mobile-navigation">
+            <div class="mobile-search-bar">
+                <div class="input-container">
+                    <input type="text" placeholder="Search or Jump to...">
+                    <i class="slash-icon">/</i>
+                </div>
+            </div>
+            <div class="mobile-nav-links">
+                <ul>
+                    <li><a href="#">Pull requests</a></li>
+                    <li><a href="#">Issues</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+            </div>
+            <div class="mobile-nav-right">
+                <ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#" id="img-link"><img alt="" id="nav-img"> AlexOkoro101</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i>   Sign Out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="nav-tabs" id="big-tab">
+        <ul>
+            <li><a href="#"><i class="fa fa-book-open"></i>Overview</a></li>
+            <li><a href="#" class="active"><i class="far fa-folder"></i> Repositories<span class="badge">26</span></a></li>
+            <li><a href="#"><i class="fas fa-calculator"></i>Projects</a></li>
+            <li><a href="#"><i class="fa fa-cube"></i>Packages</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-app">
+        <div class="profile">
+            <div class="p">
+                <div class="profile-pic">
+                    <img alt="" id="dp">
+                    <i class="fa fa-smile-o"></i>
+                </div>
+                <div class="bio">
+                    <!-- full name -->
+                    <p id="fullname"></p>
+                    <!-- username -->
+                    <p id="github-username"></p>
+    
+                    <!-- bio text -->
+                    <p id="bio-text"></p>
+                </div>
+                <div class="edit-profile">
+                    <button>Follow</button>
+                </div>
+                <div class="socials">
+                    <p><i class="far fa-envelope"></i><span id="email"> </span></p>
+                    <!-- <p><i class="fab fa-twitter"></i>@_alexokoro</p> -->
+                </div>
+            </div>
+        </div>
+        <div class="repositories">
+            <div class="nav-tabs" id="small-tab">
+                <ul>
+                    <li><a href="#"><i class="fa fa-book-open"></i>Overview</a></li>
+                    <li><a href="#" class="active"><i class="far fa-folder"></i> Repositories<span class="badge">26</span></a></li>
+                    <li><a href="#"><i class="fas fa-calculator"></i>Projects</a></li>
+                    <li><a href="#"><i class="fa fa-cube"></i>Packages</a></li>
+                </ul>
+            </div>
+            <div class="filter">
+                <input type="text" placeholder="Find a repository...">
+                <button class="select">Type <span class="fa fa-caret-down"></span></button>
+                <button class="select">Language <span class="fa fa-caret-down"></span></button>
+                <button class="select">Sort <span class="fa fa-caret-down"></span></button>
+            </div>
+            <div id="repo-container">
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="result.js"></script>
+</body>
+</html>

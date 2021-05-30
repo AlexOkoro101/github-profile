@@ -163,7 +163,7 @@ body {
     font-weight: 600;
     margin-bottom: 0;
 }
-#username {
+#github-username {
     margin-top: 0;
     font-size: 20px;
     font-style: normal;
@@ -258,6 +258,9 @@ body {
 }
 .repo-display {
     overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
 }
 .repo-detail {
     float: left;
@@ -276,6 +279,87 @@ body {
 .rating i {
     color: #6A737D;
 }
+
+/* index page form */
+.form {
+    width: 25%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+}
+.form-header {
+    text-align: center;
+}
+.form-header img {
+    width: 47px;
+}
+.form-header p {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: -.5px;
+}
+.form form {
+    background: #F6F8FA;
+    border-radius: 6px;
+    border: 1px solid #EBEDEF;
+    padding: 20px;
+}
+.form form label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 400;
+    text-align: left;
+}
+.form form input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #24292E;
+    vertical-align: middle;
+    background: #fff;
+    outline: none;
+    border: 1px solid #E1E4E8;
+    border-radius: 6px;
+
+}
+.form form button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: #2EA44F;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #298545;
+    border-radius: 6px;  
+}
+.form form button:hover {
+    background: #2C974B;
+}
+#repo-language-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
 
 
 /* responsive */
@@ -340,6 +424,9 @@ body {
     }
     .filter .select {
         margin-top: 5px;
+    }
+    .form {
+        width: 40%;
     }
 }
 
@@ -493,12 +580,21 @@ body {
     }
 }
 
+@media (max-width: 540px) {
+    .form {
+        width: 60%;
+    }
+}
+
 @media (max-width: 420px) {
     .mobile-search-bar .input-container {
         width: 94%;
     }
     .mobile-search-bar input {
         width: 93%;
+    }
+    .form {
+        width: 70%;
     }
 }
 
@@ -519,6 +615,9 @@ body {
         overflow-x: scroll;
         scrollbar-color: transparent;
     }
+    .form {
+        width: 80%;
+    }
 }
 
 @media (max-width: 360px) {
@@ -533,5 +632,21 @@ body {
 @media (max-width: 320px) {
     .mobile-search-bar input {
         width: 90%;
+    }
+    .rating {
+        float: left;
+    }
+}
+
+@media (max-width: 280px) {
+    .profile-pic img {
+        width: 40px;
+    }
+    #bio-text {
+        font-size: 13px;
+    }
+    .filter .select {
+        padding: 3px 14px;
+        font-size: 12px;
     }
 }
