@@ -613,6 +613,9 @@ body {
     .rating {
         float: left;
     }
+    .edit-profile button {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 380px) {
