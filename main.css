@@ -596,6 +596,19 @@ body {
     .form {
         width: 70%;
     }
+    #small-tab {
+        overflow-x: scroll;
+        scrollbar-color: transparent;
+        padding-bottom: 0;
+    }
+    #small-tab ul li {
+        margin-bottom: 13px;
+    }
+    #small-tab ul {
+        width: 150%;
+        overflow-x: scroll;
+        scrollbar-color: transparent;
+    }
 }
 
 @media (max-width: 380px) {
