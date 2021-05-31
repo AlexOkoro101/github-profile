@@ -4,8 +4,10 @@ import LOWKEY from './apikey.mjs';
 //DOM Elements
 const displayPicture = document.getElementById('dp');
 const  navImg = document.getElementById('nav-img');
+const  mobileNavImg = document.getElementById('mobile-nav-img');
 const fullName = document.getElementById('fullname');
 const gitUsername = document.getElementById('github-username');
+const gitNavUsername = document.getElementById('git-nav-username');
 const userBio = document.getElementById('bio-text');
 const email = document.getElementById('email');
 const totalCount = document.getElementById('count');
@@ -32,6 +34,7 @@ window.addEventListener('load', () => {
     
 
     document.getElementById('github-username').innerHTML = username;
+    document.getElementById('git-nav-username').innerHTML = username;
     fetch(baseUrl, {
         method: 'POST',
         headers: new Headers({
@@ -83,6 +86,7 @@ window.addEventListener('load', () => {
         totalCount.innerHTML = githubUser.repositories.totalCount;
         displayPicture.setAttribute("src", githubUser.avatarUrl);
         navImg.setAttribute("src", githubUser.avatarUrl);
+        mobileNavImg.setAttribute("src", githubUser.avatarUrl);
 
 
         fetchedRepos.forEach(repo => {

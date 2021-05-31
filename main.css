@@ -606,6 +606,7 @@ body {
     }
     #small-tab ul {
         width: 150%;
+        margin: 0 auto;
         overflow-x: scroll;
         scrollbar-color: transparent;
     }
