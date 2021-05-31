@@ -129,11 +129,4 @@ window.addEventListener('load', () => {
     .catch(err => console.log(err.message))
 });
 
-function myFunction() {
-    var nav = document.getElementById('mobile-navigation')
-    if(nav.style.display === 'none') {
-        nav.style.display = 'block'
-    } else {
-        nav.style.display = 'none'
-    }
-}
+
