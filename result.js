@@ -86,7 +86,7 @@ window.addEventListener('load', () => {
         totalCount.innerHTML = githubUser.repositories.totalCount;
         displayPicture.setAttribute("src", githubUser.avatarUrl);
         navImg.setAttribute("src", githubUser.avatarUrl);
-        mobileNavImg.setAttribute("src", githubUser.avatarUrl);
+        // mobileNavImg.setAttribute("src", githubUser.avatarUrl);
 
 
         fetchedRepos.forEach(repo => {
