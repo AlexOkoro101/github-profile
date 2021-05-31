@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
     
 
     document.getElementById('github-username').innerHTML = username;
-    document.getElementById('git-nav-username').innerHTML = username;
+    // document.getElementById('git-nav-username').innerHTML = username;
     fetch(baseUrl, {
         method: 'POST',
         headers: new Headers({
