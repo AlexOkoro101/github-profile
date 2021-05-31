@@ -90,20 +90,73 @@ window.addEventListener('load', () => {
 
 
         fetchedRepos.forEach(repo => {
-            // const repoName = document.createElement('p')
-            // repoName.setAttribute("id", "repo-name")
-            // repoName.innerHTML = repo.name
-            // repoDetail.append(repoName)
+            const formatedDate = Date.parse(repo.updatedAt)
 
-            
+            // This is formatted date gotten from github
+            var created = formatedDate;
 
-           
-            // language.setAttribute("id", "language")
-            /* container.innerHTML = (`<i id="repo-language-color" style="background: ${repo.primaryLanguage.color}"></i> 
-                                        ${repo.primaryLanguage.name} 
-                                        <span><i class="far fa-star"> ${repo.stargazers.totalCount} </i></span> 
-                                        <span><i class="fas fa-code-branch"></i> ${repo.forkCount}</span> 
-                                        <span id="updated">Updated ${repo.updatedAt}</span>`) */
+            // The time now
+            var now = new Date().getTime();
+
+            // The difference between now and created
+            var howLongAgo = created - now;
+
+            var getHumanTime = function (timestamp) {
+
+                // Convert to a positive integer
+                var time = Math.abs(timestamp);
+
+                // Define humanTime and units
+                var humanTime, units;
+
+                // If there are years
+                if (time > (1000 * 60 * 60 * 24 * 365)) {
+                    humanTime = parseInt(time / (1000 * 60 * 60 * 24 * 365), 10);
+                    units = 'years';
+                }
+
+                // If there are months
+                else if (time > (1000 * 60 * 60 * 24 * 30)) {
+                    humanTime = parseInt(time / (1000 * 60 * 60 * 24 * 30), 10);
+                    units = 'months';
+                }
+
+                // If there are weeks
+                else if (time > (1000 * 60 * 60 * 24 * 7)) {
+                    humanTime = parseInt(time / (1000 * 60 * 60 * 24 * 7), 10);
+                    units = 'weeks';
+                }
+
+                // If there are days
+                else if (time > (1000 * 60 * 60 * 24)) {
+                    humanTime = parseInt(time / (1000 * 60 * 60 * 24), 10);
+                    units = 'days';
+                }
+
+                // If there are hours
+                else if (time > (1000 * 60 * 60)) {
+                    humanTime = parseInt(time / (1000 * 60 * 60), 10);
+                    units = 'hours';
+                }
+
+                // If there are minutes
+                else if (time > (1000 * 60)) {
+                    humanTime = parseInt(time / (1000 * 60), 10);
+                    units = 'minutes';
+                }
+
+                // Otherwise, use seconds
+                else {
+                    humanTime = parseInt(time / (1000), 10);
+                    units = 'seconds';
+                }
+
+                return humanTime + ' ' + units + ' ago';
+
+            };
+
+            // Show the difference in the UI
+            // document.querySelector('#difference').textContent = getHumanTime(howLongAgo);
 
             const container = document.createElement('div')
             container.setAttribute("class", "repo-display");
@@ -116,7 +169,7 @@ window.addEventListener('load', () => {
                                         ${repo.primaryLanguage.name} 
                                         <span><i class="far fa-star"> ${repo.stargazers.totalCount} </i></span>
                                         <span><i class="fas fa-code-branch"></i> ${repo.forkCount}</span> 
-                                        <span id="updated">Updated  ${repo.updatedAt}</span>
+                                        <span id="updated">Updated  ${getHumanTime(howLongAgo)}</span>
                                     </p>
                                 </div>
                                 <div class="rating">
