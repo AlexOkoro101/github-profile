@@ -610,6 +610,9 @@ body {
         overflow-x: scroll;
         scrollbar-color: transparent;
     }
+    .rating {
+        float: left;
+    }
 }
 
 @media (max-width: 380px) {
@@ -647,9 +650,7 @@ body {
     .mobile-search-bar input {
         width: 90%;
     }
-    .rating {
-        float: left;
-    }
+    
 }
 
 @media (max-width: 280px) {
